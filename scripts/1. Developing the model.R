@@ -45,7 +45,7 @@ grid <- expand.grid(
 # Set up cross-validation
 train_control <- trainControl(
   method = "cv",
-  number = 5,
+  number = 10,
   verboseIter = TRUE,
   classProbs = TRUE,
   summaryFunction = twoClassSummary,
