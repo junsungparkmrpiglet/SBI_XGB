@@ -54,10 +54,10 @@ The models are designed to provide individualized risk probabilities for SBI and
 ----------------------
 
 
-📊 Dataset
+**📊 Dataset**
 
 
-📌 Data Description
+**📌 Data Description**
 
 The study includes 2,860 febrile infants who visited the emergency department:
 
@@ -65,20 +65,32 @@ Development dataset: 2,288 infants (2015–2021)
 
 Validation dataset: 572 infants (2022–2023)
 
-Feature	Description
+
+**📌Feature	Description**
 
 Patient_ID	Unique identifier
 
 Age	Infant’s age (days)
+
 Sex	Male/Female
+
 Temperature	Maximum recorded fever (°C)
+
 CRP	C-reactive protein level (mg/L)
+
 Procalcitonin	Procalcitonin level (ng/mL)
+
 WBC	White blood cell count (×10⁹/L)
+
 ANC	Absolute neutrophil count (cells/µL)
+
 Urine_Nitrite	Urine test result (Positive/Negative)
+
+
 Urine_WBC	White blood cells in urine
+
 SBI	Serious bacterial infection (1 = Yes, 0 = No)
+
 ⚠️ Note: The original dataset contains protected health information (PHI) and cannot be shared. A synthetic example dataset (data/example_SBI_data.csv) is provided for demonstration.
 
 ----------------------
