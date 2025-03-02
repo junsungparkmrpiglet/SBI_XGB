@@ -13,14 +13,15 @@ train_data$SBI <- as.factor(train_data$SBI)  # Ensure outcome variable is treate
 levels(train_data$SBI) <- c("No", "Yes")  # Assuming SBI is a binary outcome
 
 # Fit model using 10-fold cross-validation
-set.seed(1234)
-xgb_grid <- expand.grid(nrounds = 100,
-                        max_depth = 6,
-                        eta = 0.3,
-                        gamma = 0,
-                        colsample_bytree = 1,
-                        min_child_weight = 1,
-                        subsample = 1)
+xgb_grid <- expand.grid(
+  nrounds = c(100, 200, 300),
+  max_depth = c(4, 6, 8),
+  eta = c(0.01, 0.1, 0.3),
+  gamma = c(0, 0.1, 1),
+  colsample_bytree = c(0.7, 0.9, 1),
+  min_child_weight = c(1, 3, 5),
+  subsample = c(0.8, 1)
+)
 
 cv_model <- train(SBI ~ ., data = train_data,
                   method = "xgbTree",
