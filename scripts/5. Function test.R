@@ -1,5 +1,9 @@
 # function test
 
+library(tidyr)
+library(pander)
+library(caTools)
+
 # Read the Excel file
 dataset1 <- read_excel("C:/download/1. SBI_development.xlsx")
 model <- xgb.load("C:/download/SBI_xgboost_model_train_test_split.model")
