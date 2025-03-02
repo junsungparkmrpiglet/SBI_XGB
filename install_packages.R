@@ -1,5 +1,5 @@
 # List of required packages
-required_packages <- c("readxl", "xgboost", "dplyr", "caret", "ggplot2", "pROC", "rms")
+required_packages <- c("readxl", "xgboost", "dplyr", "caret", "ggplot2", "pROC", "rms", "tidyr", "pander", "openxlsx". "SHAPforxgboost", "caTools")
 
 # Install missing packages
 new_packages <- required_packages[!(required_packages %in% installed.packages()[,"Package"])]
