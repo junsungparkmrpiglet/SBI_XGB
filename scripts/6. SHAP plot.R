@@ -1,4 +1,7 @@
-# SHAP plot 만들기
+# SHAP plot
+
+library(SHAPforxgboost)
+
 # SHAP
 test_matrix <- as.matrix(test_set[, 2:30])
 shap_values <- shap.values(xgb_model = model, X_train = test_matrix)
